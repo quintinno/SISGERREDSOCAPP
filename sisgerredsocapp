@@ -1,0 +1,45 @@
+# SISGERREDSOC - Sistema de Gerenciamento de Rede Social (SISGERREDSOCAPP)
+
+    + Tecnologias
+
+        - Node
+
+        - Ionic 
+
+    + Versão do Sistema
+
+        -- Nome da Versão
+            
+            SISGERREDSOC-v0.0.1-SNAPSHOT
+
+        -- Funcionalidades da Versão
+
+            -- Página Principal
+
+    + Comandos
+
+        -- Projeto
+
+            -- Criar projeto e componentes
+
+                ionic start SISGERREDSOCAPP tabs --type=angular --capacitor
+
+                ionic generate module components/shared-components --flat
+                ionic generate component components/tweet
+
+                ionic generate module directives/shared-directives --flat
+                ionic generate directive directives/hide-header
+                ionic generate directive directives/sticky-segment
+
+    + Versionamento
+
+        git init
+        git status
+        git add *
+        git remote add origin https://github.com/quintinno/SISGERREDSOCAPP.git
+        git commit -a -m $"SISGERREDSOCAPP-20210510195106"
+        git push -u origin master
+
+    + Funcionalidades
+
+        
