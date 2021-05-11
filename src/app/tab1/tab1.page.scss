@@ -1,3 +1,31 @@
+ion-header {
+    background: #FFFFFF;
+}
+
 ion-title {
     text-align: center;
+}
+
+ion-toolbar {
+    --border-style: none;
+}
+
+ion-slides {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--ion-color-light);
+}
+
+ion-segment {
+    z-index: 10;
+    background: #FFFFFF;
+}
+
+ion-segment-button {
+    text-transform: none;
+}
+
+ion-avatar {
+    border: 2px solid var(--ion-color-primary);
+    padding: 2px;
 }

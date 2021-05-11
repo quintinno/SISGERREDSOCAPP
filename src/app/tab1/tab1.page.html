@@ -43,7 +43,7 @@
   </ion-slides>
 
   <div *ngIf="segment == 'home'">
-    <app-tweet *ngFor="let twitter_ of twitterList"></app-tweet>
+    <app-tweet *ngFor="let twitter_ of twitterList" [tweetObject]="tweetObject"></app-tweet>
   </div>
 
   <div *ngIf="segment == 'conteudo'">
