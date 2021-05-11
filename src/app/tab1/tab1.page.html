@@ -1,17 +1,53 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="menu-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
     <ion-title>
-      Tab 1
+      <ion-icon name="logo-twitter" color="primary" size="large"></ion-icon>
     </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="pulse-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-segment [(ngModel)]="segment">
+
+    <ion-segment-button value="home">
+      <ion-label>Home</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="conteudo">
+      <ion-label>Conteúdo</ion-label>
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <ion-slides [options]="options">
+    <ion-slide *ngFor="let twitter_ of twitterList">
+      <ion-avatar>
+        <img [src]="twitter_.img"/>
+      </ion-avatar>
+    </ion-slide>
+  </ion-slides>
+
+  <div *ngIf="segment == 'home'">
+    <app-tweet *ngFor="let twitter_ of twitterList"></app-tweet>
+  </div>
+
+  <div *ngIf="segment == 'conteudo'">
+    Conteúdo
+  </div>
+
 </ion-content>
